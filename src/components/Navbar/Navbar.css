@@ -1,0 +1,94 @@
+/* Navbar.css */
+
+.navbar {
+    width: 100%;
+    background-color: #f8f9fa;
+  }
+  
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  .top-left{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+  }
+  .top-right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+  }
+
+  
+  .search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    width: 50vh;
+    height: 5vh;
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .search-icon {
+    width: 7vh;
+    height: 6.5vh;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .language, .util-icons, .sell-icon {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .navbar-bottom {
+    background-color: #f8f9fa;
+    padding: 10px;
+  }
+  
+  .category-dropdown {
+    padding: 5px;
+  }
+  
+  .navbar-bottom-p2 .category-link {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .profile{
+    font-size: 20px;
+  }
+
+  .sell-icon button{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 20px;
+    border-radius: 16px;
+    border: solid;
+  }
+
+  .navbar-bottom{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .navbar-bottom-p2{
+    font-size: 14px;
+  }

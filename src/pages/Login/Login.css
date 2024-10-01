@@ -1,0 +1,91 @@
+/* Centering the login form on the screen */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; /* Full screen height */
+    background-color: #f2f2f2; /* Light background */
+    padding: 20px;
+  }
+  
+  .container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333; /* Darker text for better readability */
+  }
+  
+  /* Form Styling */
+  form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Form Input Fields */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #007bff; /* Blue focus border */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Subtle glow on focus */
+  }
+  
+  /* Submit Button */
+  .form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .form-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Sign-up Link */
+  p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    form {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .container h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

@@ -1,0 +1,120 @@
+/* Container Flex Layout */
+.sell-product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 20%;
+}
+
+/* Form Section */
+.sell-product {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .sell-product {
+    width: 60%;
+  }
+}
+
+/* Image Upload Section */
+.image-upload-section {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .image-upload-section {
+    width: 30%;
+  }
+}
+
+/* Image Preview */
+.image-preview-container {
+  margin-top: 20px;
+}
+
+.image-preview-square {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* Upload Button */
+.upload-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #0056b3;
+}
+
+/* Form Fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+/* Back Button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 70px; /* Adjusted width */
+  height: 70px; /* Adjusted height */
+  background-color: transparent; /* Transparent background */
+  border: none;
+
+  cursor: pointer;
+}
+
+.back-button img {
+  width: 100%; /* Makes the icon fill the button */
+  height: 85%; /* Keeps the aspect ratio */
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sell-product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sell-product, .image-upload-section {
+    width: 90%;
+  }
+
+  .back-button img {
+    width: 70%; /* Makes the icon fill the button */
+    height: 55%; /* Keeps the aspect ratio */
+  }
+  
+
+  .image-upload-section {
+    margin-bottom: 20px;
+  }
+}
