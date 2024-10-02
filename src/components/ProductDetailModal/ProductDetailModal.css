@@ -1,4 +1,4 @@
-/* Modal overlay */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -12,105 +12,105 @@
   z-index: 1000;
 }
 
-/* Modal content */
+
 .modal-content {
-  background: #f0f4ff; /* Light blue background */
-  color: #333; /* Darker text */
+  background: #f0f4ff; 
+  color: #333; 
   border-radius: 8px;
-  max-width: 90%; /* Maximum width */
-  max-height: 80vh; /* Limit modal height to 80% of viewport height */
-  width: 80%; /* Default width */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack content vertically */
-  overflow: hidden; /* Hide overflow */
+  max-width: 90%; 
+  max-height: 80vh; 
+  width: 80%; 
+  display: flex; 
+  flex-direction: column; 
+  overflow: hidden; 
   position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
-/* Close button */
+
 .close-button {
   position: absolute;
-  top: 20px; /* Adjusted position */
-  right: 20px; /* Adjusted position */
+  top: 20px; 
+  right: 20px; 
   background: none;
   border: none;
   cursor: pointer;
-  color: #333; /* Darker color for close button */
+  color: #333; 
 }
 
-/* Modal body for image and content */
+
 .modal-body {
-  display: flex; /* Flexbox for side-by-side layout */
-  max-height: 70vh; /* Limit height of body */
+  display: flex; 
+  max-height: 70vh; 
 }
 
-/* Image container */
+
 .image-container {
-  flex: 1; /* Image takes up one part of the flex container */
+  flex: 1; 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* Padding around image */
+  padding: 10px; 
 }
 
-/* Image styling */
+
 .modal-image {
-  width: 100%; /* Set image width to 100% of its container */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 100%; /* Ensure image doesn't exceed its container */
-  object-fit: contain; /* Show the entire image */
-  border-radius: 8px; /* Rounded corners */
+  width: 100%; 
+  height: auto; 
+  max-height: 100%; 
+  object-fit: contain; 
+  border-radius: 8px; 
 }
 
-/* Content container */
+
 .content-container {
-  flex: 2; /* Content takes up more space */
-  padding: 20px; /* Padding for content */
-  overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
+  flex: 2; 
+  padding: 20px; 
+  overflow-y: auto; 
 }
 
-/* Title styling */
+
 .modal-title {
-  color: #007bff; /* Blue color for the title */
+  color: #007bff; 
   text-align: center;
-  margin-bottom: 10px; /* Reduced margin */
+  margin-bottom: 10px; 
 }
 
-/* Product section */
+
 .product-section, .seller-section {
-  margin-bottom: 15px; /* Spacing between sections */
+  margin-bottom: 15px; 
   border: 1px solid #0056b3;
   border-radius: 8px;
-  padding: 10px; /* Reduced padding */
-  background-color: #fff; /* White background */
+  padding: 10px; 
+  background-color: #fff; 
 }
 
-/* Seller details styling */
+
 .seller-details {
   display: flex;
   align-items: center;
 }
 
 .seller-image {
-  width: 40px; /* Smaller size for seller image */
-  height: 40px; /* Smaller size for seller image */
+  width: 40px; 
+  height: 40px; 
   border-radius: 50%;
   margin-right: 10px;
   border: 2px solid #007bff;
 }
 
 .seller-info p {
-  margin: 2px 0; /* Smaller margin */
-  font-size: 0.9em; /* Smaller font size */
+  margin: 2px 0; 
+  font-size: 0.9em; 
 }
 
-/* Section headers */
+
 h3 {
-  color: #0056b3; /* Darker blue for headers */
-  font-size: 1em; /* Smaller font size */
+  color: #0056b3; 
+  font-size: 1em; 
 }
 
 p {
-  margin: 2px 0; /* Smaller margin */
-  font-size: 0.9em; /* Smaller font size */
+  margin: 2px 0; 
+  font-size: 0.9em; 
 }

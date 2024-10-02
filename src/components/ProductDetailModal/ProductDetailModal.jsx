@@ -8,21 +8,21 @@ const ProductDetailModal = ({ product, sellerProfile, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        {/* Close Button */}
+        {}
         <button onClick={onClose} className="close-button">
           <X size={22} />
         </button>
 
-        {/* Flexbox layout for image and details */}
+        {}
         <div className="modal-body">
-          {/* Product Image Section */}
+          {}
           <div className="image-container">
             <img src={product.image_url} alt={product.name} className="modal-image" />
           </div>
 
-          {/* Product and Seller Info Section */}
+          {}
           <div className="content-container">
-            {/* Product Info */}
+            {}
             <div className="product-section">
               <h2 className="modal-title">{product.name}</h2>
               <div className="product-details">
@@ -36,7 +36,7 @@ const ProductDetailModal = ({ product, sellerProfile, onClose }) => {
               </div>
             </div>
 
-            {/* Seller Info */}
+            {}
             <div className="seller-section">
               <h3>Seller Profile</h3>
               <div className="seller-details">

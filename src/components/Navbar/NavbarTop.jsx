@@ -10,7 +10,7 @@ const NavbarTop = ({ showSearch = true, showSellButton = true, showProfile = tru
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
-  const { filterProductsBySearch } = useContext(ProductContext); // Access filter function and clear function
+  const { filterProductsBySearch } = useContext(ProductContext); 
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -33,14 +33,12 @@ const NavbarTop = ({ showSearch = true, showSellButton = true, showProfile = tru
   };
 
   const handleLogout = () => {
-    // Clear local storage and state
+    
     localStorage.removeItem('token');
     localStorage.removeItem('image_url');
-    localStorage.removeItem('userId'); // Remove userId or any other relevant items
+    localStorage.removeItem('userId'); 
     localStorage.setItem("logoutSuccess","true")
-
-
-    // Update authentication state
+    
     setIsAuthenticated(false);
 
     window.location.reload();
@@ -49,7 +47,7 @@ const NavbarTop = ({ showSearch = true, showSellButton = true, showProfile = tru
   const handleSearchChange = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
-    filterProductsBySearch(term); // Call filter function on input change
+    filterProductsBySearch(term); 
   };
 
   return (
@@ -62,8 +60,8 @@ const NavbarTop = ({ showSearch = true, showSellButton = true, showProfile = tru
               type="text"
               className="search-input"
               placeholder="Find Cars, Mobile Phones and more..."
-              value={searchTerm} // Controlled input
-              onChange={handleSearchChange} // Update state on change
+              value={searchTerm} 
+              onChange={handleSearchChange} 
             />
           </div>
         )}
@@ -96,7 +94,7 @@ const NavbarTop = ({ showSearch = true, showSellButton = true, showProfile = tru
             <button onClick={() => {navigate('/sell')} }>+ Sell</button>
           </div>
         )}
-        {/* Logout button */}
+        {}
         {isAuthenticated && (
           <button className="home-button" onClick={handleLogout}>
             Logout

@@ -1,10 +1,10 @@
 .banner {
     width: 100%;
-    overflow: hidden; /* Prevents overflow */
+    overflow: hidden; 
 }
 
 .banner img {
-    width: 100%; /* Use 100% of the parent width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove bottom whitespace in some browsers */
+    width: 100%; 
+    height: auto; 
+    display: block; 
 }

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import { AuthProvider, useAuth } from "./hooks/UseAuth"; 
 import { CategoryProvider } from "./context/CategoryContext";
 import ProductProvider from "./context/ProductContext";
-import { ToastContainer } from 'react-toastify'; // Import ToastContainer
+import { ToastContainer } from 'react-toastify'; 
 
 import Home from "./pages/Home/Home";
 import LoginPage from "./pages/Login/Login";
@@ -16,7 +16,7 @@ import { ToastProvider } from "./context/ToastContext";
 const PrivateRoute = ({ element }) => {
   const { isAuthenticated, loading } = useAuth(); 
 
-  if (loading) return <div>Loading...</div>; // Handle loading state if needed
+  if (loading) return <div>Loading...</div>; 
 
   return isAuthenticated ? element : <Navigate to="/login" />;
 };
@@ -25,7 +25,7 @@ const PrivateRoute = ({ element }) => {
 const PublicRoute = ({ element }) => {
   const { isAuthenticated, loading } = useAuth(); 
 
-  if (loading) return <div>Loading...</div>; // Handle loading state if needed
+  if (loading) return <div>Loading...</div>;
 
   return isAuthenticated ? <Navigate to="/" /> : element;
 };
@@ -49,7 +49,7 @@ const App = () => {
                   <Route path="/sell" element={<PrivateRoute element={<Sell />} />} />
                   <Route path="/profile" element={<PrivateRoute element={<ProfilePage />} />} />
                 </Routes>
-                <ToastContainer /> {/* Ensure this is included */}
+                <ToastContainer /> 
               </div>
             </Router>
           </ProductProvider>

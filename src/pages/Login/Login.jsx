@@ -15,7 +15,6 @@ const LoginPage = () => {
 
   const { checkAndShowToasts } = useToast();
 
-  // Check and show any toasts from local storage on component mount
   useEffect(() => {
     checkAndShowToasts();
   }, [checkAndShowToasts]);
@@ -40,15 +39,12 @@ const LoginPage = () => {
       const data = await response.json();
       console.log("token isss", data);
       
-      // Store token and user ID in local storage
       localStorage.setItem('token', data.token);
       localStorage.setItem('userId', data.user.ID);
-      localStorage.setItem('loginSuccess', 'true'); // Set key for login success in local storage
+      localStorage.setItem('loginSuccess', 'true');
 
-      // Call the login function from useAuth
       login(data.token);
       
-      // Navigate to home after a successful login
       setTimeout(() => {
         console.log('Navigating to home...');
         navigate('/');

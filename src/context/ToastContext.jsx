@@ -5,7 +5,6 @@ const ToastContext = createContext();
 
 export const ToastProvider = ({ children }) => {
   const checkAndShowToasts = () => {
-    // Check for specific toast keys in local storage
     const toastMessages = [
       { key: 'loginSuccess', message: 'Login successful!' },
       { key: 'signupSuccess', message: 'Signup successful!' },

@@ -1,13 +1,13 @@
 import React, { useState, useContext, useEffect } from 'react';
 import useCloudinaryUpload from '../../hooks/useCloudinaryUpload';
-import './SellProduct.css'; // Import the CSS file
-import CategoryContext from '../../context/CategoryContext'; // Import the CategoryContext
+import './SellProduct.css'; 
+import CategoryContext from '../../context/CategoryContext'; 
 import { useNavigate } from 'react-router-dom'; 
-import { ToastContainer, toast } from 'react-toastify'; // Import React Toastify
-import 'react-toastify/dist/ReactToastify.css'; // Import the default styles
+import { ToastContainer, toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const SellProduct = () => {
-  const { categories } = useContext(CategoryContext); // Get categories from context
+  const { categories } = useContext(CategoryContext); 
 
   const [productName, setProductName] = useState('');
   const [description, setDescription] = useState('');
@@ -16,11 +16,10 @@ const SellProduct = () => {
   const [address, setAddress] = useState('');
   const [state, setState] = useState('');
   const [pincode, setPincode] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Set default category
-  const [errors, setErrors] = useState({}); // Error state
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]); 
+  const [errors, setErrors] = useState({}); 
   const { uploadImage, loading } = useCloudinaryUpload();
 
-  // Validation logic
   const validateForm = () => {
     const newErrors = {};
     if (!productName) newErrors.productName = 'Product name is required.';
@@ -66,15 +65,15 @@ const SellProduct = () => {
       });
 
       if (response.ok) {
-        toast.success('Product added successfully!'); // Show success toast
+        toast.success('Product added successfully!'); 
         resetForm();
       } else {
         setErrors({ submit: 'Failed to add product.' });
-        toast.error('Failed to add product.'); // Show error toast
+        toast.error('Failed to add product.');
       }
     } else {
       setErrors({ image: 'Image upload failed.' });
-      toast.error('Image upload failed.'); // Show error toast
+      toast.error('Image upload failed.');
     }
   };
 
@@ -92,7 +91,7 @@ const SellProduct = () => {
 
   return (
     <div className="sell-product-container">
-      <ToastContainer /> {/* Add the ToastContainer for toast notifications */}
+      <ToastContainer />
       <div className="sell-product">
         <h2>Post Your Ad</h2>
         <form onSubmit={handleSubmit}>

@@ -1,35 +1,35 @@
 .product-viewer {
-  padding: 20px; /* Padding for the viewer */
+  padding: 20px; 
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Increased min-width for bigger cards */
-  gap: 20px; /* Slightly reduced space between cards */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+  gap: 20px; 
 }
 
 .product-card {
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px; /* Consistent border-radius */
+  border-radius: 8px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 12px; /* Slightly more padding for content */
+  padding: 12px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 270px; /* Increased card height */
+  height: 270px; 
 }
 
 .product-image {
   width: 100%;
-  height: 140px; /* Increased image height */
+  height: 140px; 
   object-fit: cover;
   border-radius: 8px;
 }
 
 .product-info {
-  margin-top: 6px; /* Reduced margin between image and info */
+  margin-top: 6px; 
   text-align: center;
   flex-grow: 1;
   display: flex;
@@ -38,28 +38,28 @@
 }
 
 .product-info h3 {
-  font-size: 1.1rem; /* Slightly bigger font size for title */
-  margin-bottom: 2px; /* Tighter margin for title */
-  height: 25px; /* Adjusted height */
+  font-size: 1.1rem; 
+  margin-bottom: 2px; 
+  height: 25px; 
   overflow: hidden;
 }
 
 .product-info p {
-  font-size: 0.85rem; /* Slightly increased font size for better readability */
-  margin: 0; /* Removed margin to bring text closer */
-  height: 22px; /* Increased height for more text display */
+  font-size: 0.85rem; 
+  margin: 0; 
+  height: 22px; 
   overflow: hidden;
 }
 
 .view-more {
-  padding: 8px 16px; /* Increased button padding for larger cards */
+  padding: 8px 16px; 
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px; /* Slightly rounded corners */
+  border-radius: 5px; 
   cursor: pointer;
-  font-size: 0.9rem; /* Slightly bigger font for button */
-  margin-top: 6px; /* Reduced space above the button */
+  font-size: 0.9rem; 
+  margin-top: 6px; 
 }
 
 .view-more:hover {

@@ -11,24 +11,24 @@ const NavbarBottom = () => {
   const handleCategoryChange = (e) => {
     const selected = e.target.value;
 
-    // If "All Categories" is selected, reset to original products
+    
     if (selected === '') {
       setSelectedCategory('');
-      filterProductsByCategory(''); // Reset to show all products
+      filterProductsByCategory(''); 
     } else if (selected === selectedCategory) {
-      // If the same category is selected, reset to original products
+      
       setSelectedCategory('');
-      filterProductsByCategory(''); // Reset to show all products
+      filterProductsByCategory(''); 
     } else {
       setSelectedCategory(selected);
-      filterProductsByCategory(selected); // Call filter function on category change
+      filterProductsByCategory(selected); 
     }
   };
 
   const handleCategoryClick = (category) => {
     if (category === selectedCategory) {
-      setSelectedCategory(''); // Clear selection
-      filterProductsByCategory(''); // Reset to show all products
+      setSelectedCategory(''); 
+      filterProductsByCategory(''); 
     } else {
       setSelectedCategory(category);
       filterProductsByCategory(category);

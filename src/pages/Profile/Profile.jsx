@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { FaEdit } from "react-icons/fa"; // Ensure react-icons is installed
+import { FaEdit } from "react-icons/fa"; 
 import ProductViewer from "../../components/ProductViewer/ProductViewer";
 import "./Profile.css";
 import profileImage from "../../assets/profileimage.png";
@@ -13,7 +13,7 @@ const Profile = () => {
   const [loading, setLoading] = useState(true);
   const [imageFile, setImageFile] = useState(null);
   const { uploadImage, loading: uploading, error: uploadError } = useCloudinaryUpload();
-  const fileInputRef = useRef(null); // Reference for the hidden file input
+  const fileInputRef = useRef(null); 
 
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const Profile = () => {
   };
 
   const handleEditIconClick = () => {
-    fileInputRef.current.click(); // Trigger the file input click programmatically
+    fileInputRef.current.click(); 
   };
 
   const handleImageUpload = async () => {

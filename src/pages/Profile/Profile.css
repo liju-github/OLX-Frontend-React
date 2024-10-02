@@ -1,29 +1,29 @@
 .profile-container {
   padding: 20px;
-  max-width: 1000px; /* Limit width for better layout */
-  margin: 0 auto; /* Center align the container */
-  background-color: #f9f9f9; /* Add a subtle background */
+  max-width: 1000px; 
+  margin: 0 auto; 
+  background-color: #f9f9f9; 
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .profile-info {
   display: flex;
   align-items: center;
-  gap: 20px; /* Increased gap for better spacing */
+  gap: 20px; 
   margin-bottom: 40px;
-  border-bottom: 1px solid #ddd; /* Add a separator */
+  border-bottom: 1px solid #ddd; 
   padding-bottom: 20px;
 }
 
 .user-info {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* More gap between text */
+  gap: 10px; 
 }
 
 h2 {
-  font-size: 24px; /* Larger font size for the name */
+  font-size: 24px; 
   font-weight: bold;
   color: #333;
   margin: 0;
@@ -31,7 +31,7 @@ h2 {
 
 p {
   font-size: 16px;
-  color: #666; /* Subtle text color for email and other info */
+  color: #666; 
   margin: 0;
 }
 
@@ -45,12 +45,12 @@ p {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #007bff; /* Add border around image */
-  transition: transform 0.3s ease; /* Add hover effect */
+  border: 3px solid #007bff; 
+  transition: transform 0.3s ease; 
 }
 
 .profile-image:hover {
-  transform: scale(1.05); /* Slight scale on hover */
+  transform: scale(1.05); 
 }
 
 .edit-icon {
@@ -59,17 +59,17 @@ p {
   right: 5px;
   cursor: pointer;
   color: #007bff;
-  font-size: 20px; /* Keep icon size smaller */
+  font-size: 20px; 
   background-color: white;
   border-radius: 50%;
   padding: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to the icon */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .edit-icon:hover {
   color: white;
-  background-color: #007bff; /* Invert icon color on hover */
+  background-color: #007bff; 
 }
 
 .profile-products {
@@ -87,11 +87,11 @@ h3 {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 20px; /* Increased padding for better look */
+  padding: 10px 20px; 
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
-  font-size: 16px; /* Larger font for buttons */
+  font-size: 16px; 
 }
 
 .profilebutton:hover {
@@ -100,15 +100,15 @@ h3 {
 
 @media (max-width: 600px) {
   .profile-info {
-    flex-direction: column; /* Stack profile info on small screens */
+    flex-direction: column; 
     align-items: flex-start;
   }
 
   .profile-image {
-    margin-bottom: 20px; /* Add space below the image on small screens */
+    margin-bottom: 20px; 
   }
 
   h2, p, h3 {
-    text-align: center; /* Center align text on small screens */
+    text-align: center; 
   }
 }

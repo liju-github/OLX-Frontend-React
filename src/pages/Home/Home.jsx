@@ -4,7 +4,7 @@ import NavbarBottom from '../../components/Navbar/NavbarBottom';
 import banner from "../../assets/banner.png";
 import ProductViewer from '../../components/ProductViewer/ProductViewer';
 import { ProductContext } from '../../context/ProductContext';
-import { useToast } from '../../context/ToastContext'; // Ensure the path is correct
+import { useToast } from '../../context/ToastContext'; 
 import './Home.css';
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
   const { checkAndShowToasts } = useToast();
 
   useEffect(() => {
-    checkAndShowToasts(); // Check and show any toasts from local storage
+    checkAndShowToasts(); 
   }, [checkAndShowToasts]);
 
   return (

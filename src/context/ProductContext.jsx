@@ -40,7 +40,7 @@ const ProductProvider = ({ children }) => {
 
         const data = await response.json();
         setProducts(data.products);
-        setFilteredProducts(data.products); // Initialize filteredProducts
+        setFilteredProducts(data.products); 
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -74,7 +74,7 @@ const ProductProvider = ({ children }) => {
       error,
       filterProductsBySearch,
       filterProductsByCategory,
-      isAuthenticated, // Optionally provide authentication status
+      isAuthenticated, 
     }}>
       {children}
     </ProductContext.Provider>

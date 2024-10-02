@@ -13,7 +13,6 @@ const SignupPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Redirect to home if user is already logged in
     const token = localStorage.getItem('token');
     if (token) {
       navigate('/');
@@ -72,10 +71,8 @@ const SignupPage = () => {
       const data = await response.json();
       console.log('Signup successful:', data);
 
-      // Store success message in localStorage
       localStorage.setItem('signupSuccess', 'Signup successful! Please log in.');
 
-      // Redirect to login page
       navigate('/login');
 
     } catch (err) {

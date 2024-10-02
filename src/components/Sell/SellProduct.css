@@ -1,4 +1,4 @@
-/* Container Flex Layout */
+
 .sell-product-container {
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
   padding: 20px 20%;
 }
 
-/* Form Section */
+
 .sell-product {
   width: 100%;
   max-width: 600px;
@@ -19,7 +19,7 @@
   }
 }
 
-/* Image Upload Section */
+
 .image-upload-section {
   width: 100%;
   max-width: 200px;
@@ -36,7 +36,7 @@
   }
 }
 
-/* Image Preview */
+
 .image-preview-container {
   margin-top: 20px;
 }
@@ -51,7 +51,7 @@
   margin-bottom: 10px;
 }
 
-/* Upload Button */
+
 .upload-button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -66,12 +66,12 @@
   background-color: #0056b3;
 }
 
-/* Form Fields */
+
 .form-group {
   margin-bottom: 20px;
 }
 
-/* Error Message */
+
 .error-message {
   color: red;
   font-size: 0.85rem;
@@ -81,7 +81,7 @@
 
 
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   .sell-product-container {
     flex-direction: column;
@@ -93,8 +93,8 @@
   }
 
   .back-button img {
-    width: 70%; /* Makes the icon fill the button */
-    height: 55%; /* Keeps the aspect ratio */
+    width: 70%; 
+    height: 55%; 
   }
   
 
@@ -103,21 +103,21 @@
   }
 }
 
-/* Add to your SellProduct.css or a separate CSS file */
+
 .toast {
-  background-color: #333; /* Dark background */
-  color: white; /* White text */
-  padding: 10px; /* Some padding */
-  border-radius: 5px; /* Rounded corners */
-  position: fixed; /* Fixed position */
-  bottom: 20px; /* Distance from the bottom */
-  right: 20px; /* Distance from the right */
-  z-index: 9999; /* Make sure it's on top */
-  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s; /* Animation for fade in/out */
+  background-color: #333; 
+  color: white; 
+  padding: 10px; 
+  border-radius: 5px; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 9999; 
+  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s; 
 }
 
 .fade-out {
-  opacity: 0; /* Fade out */
+  opacity: 0; 
 }
 
 @keyframes fadeIn {

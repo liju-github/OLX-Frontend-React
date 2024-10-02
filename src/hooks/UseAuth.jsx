@@ -1,9 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
-// Create the AuthContext
 const AuthContext = createContext();
 
-// Custom hook to access the AuthContext
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
@@ -12,11 +10,10 @@ export const useAuth = () => {
   return context;
 };
 
-// AuthProvider component
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     const token = localStorage.getItem("token");
-    return !!token; // If token exists, user is authenticated
+    return !!token; 
   });
 
   const login = (token) => {
