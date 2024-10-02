@@ -1,0 +1,116 @@
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background: #f0f4ff; /* Light blue background */
+  color: #333; /* Darker text */
+  border-radius: 8px;
+  max-width: 90%; /* Maximum width */
+  max-height: 80vh; /* Limit modal height to 80% of viewport height */
+  width: 80%; /* Default width */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack content vertically */
+  overflow: hidden; /* Hide overflow */
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 20px; /* Adjusted position */
+  right: 20px; /* Adjusted position */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333; /* Darker color for close button */
+}
+
+/* Modal body for image and content */
+.modal-body {
+  display: flex; /* Flexbox for side-by-side layout */
+  max-height: 70vh; /* Limit height of body */
+}
+
+/* Image container */
+.image-container {
+  flex: 1; /* Image takes up one part of the flex container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Padding around image */
+}
+
+/* Image styling */
+.modal-image {
+  width: 100%; /* Set image width to 100% of its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Ensure image doesn't exceed its container */
+  object-fit: contain; /* Show the entire image */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Content container */
+.content-container {
+  flex: 2; /* Content takes up more space */
+  padding: 20px; /* Padding for content */
+  overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
+}
+
+/* Title styling */
+.modal-title {
+  color: #007bff; /* Blue color for the title */
+  text-align: center;
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Product section */
+.product-section, .seller-section {
+  margin-bottom: 15px; /* Spacing between sections */
+  border: 1px solid #0056b3;
+  border-radius: 8px;
+  padding: 10px; /* Reduced padding */
+  background-color: #fff; /* White background */
+}
+
+/* Seller details styling */
+.seller-details {
+  display: flex;
+  align-items: center;
+}
+
+.seller-image {
+  width: 40px; /* Smaller size for seller image */
+  height: 40px; /* Smaller size for seller image */
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #007bff;
+}
+
+.seller-info p {
+  margin: 2px 0; /* Smaller margin */
+  font-size: 0.9em; /* Smaller font size */
+}
+
+/* Section headers */
+h3 {
+  color: #0056b3; /* Darker blue for headers */
+  font-size: 1em; /* Smaller font size */
+}
+
+p {
+  margin: 2px 0; /* Smaller margin */
+  font-size: 0.9em; /* Smaller font size */
+}

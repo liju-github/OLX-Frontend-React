@@ -1,0 +1,114 @@
+.profile-container {
+  padding: 20px;
+  max-width: 1000px; /* Limit width for better layout */
+  margin: 0 auto; /* Center align the container */
+  background-color: #f9f9f9; /* Add a subtle background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Increased gap for better spacing */
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd; /* Add a separator */
+  padding-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* More gap between text */
+}
+
+h2 {
+  font-size: 24px; /* Larger font size for the name */
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  color: #666; /* Subtle text color for email and other info */
+  margin: 0;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff; /* Add border around image */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.profile-image:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 20px; /* Keep icon size smaller */
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to the icon */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.edit-icon:hover {
+  color: white;
+  background-color: #007bff; /* Invert icon color on hover */
+}
+
+.profile-products {
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profilebutton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Increased padding for better look */
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px; /* Larger font for buttons */
+}
+
+.profilebutton:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .profile-info {
+    flex-direction: column; /* Stack profile info on small screens */
+    align-items: flex-start;
+  }
+
+  .profile-image {
+    margin-bottom: 20px; /* Add space below the image on small screens */
+  }
+
+  h2, p, h3 {
+    text-align: center; /* Center align text on small screens */
+  }
+}

@@ -3,15 +3,22 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAuth } from '../../hooks/UseAuth';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'
+import { useToast } from '../../context/ToastContext';
+import './Login.css';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { login, isAuthenticated } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
 
+  const { checkAndShowToasts } = useToast();
+
+  // Check and show any toasts from local storage on component mount
+  useEffect(() => {
+    checkAndShowToasts();
+  }, [checkAndShowToasts]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -31,12 +38,22 @@ const LoginPage = () => {
       }
 
       const data = await response.json();
-      console.log("token isss",data)
-      localStorage.setItem('token', data["token"]);
+      console.log("token isss", data);
+      
+      // Store token and user ID in local storage
+      localStorage.setItem('token', data.token);
       localStorage.setItem('userId', data.user.ID);
+      localStorage.setItem('loginSuccess', 'true'); // Set key for login success in local storage
 
-      login(data.token); // Set the authentication status
-      navigate('/'); // Redirect to home after login
+      // Call the login function from useAuth
+      login(data.token);
+      
+      // Navigate to home after a successful login
+      setTimeout(() => {
+        console.log('Navigating to home...');
+        navigate('/');
+        window.location.reload();
+      }, 100);
     } catch (err) {
       setError(err.message);
       toast.error(err.message, {

@@ -1,8 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import useCloudinaryUpload from '../../hooks/useCloudinaryUpload';
 import './SellProduct.css'; // Import the CSS file
 import CategoryContext from '../../context/CategoryContext'; // Import the CategoryContext
-import backicon from '../../assets/back-button.png'; // Import the back button icon
+import { useNavigate } from 'react-router-dom'; 
+import { ToastContainer, toast } from 'react-toastify'; // Import React Toastify
+import 'react-toastify/dist/ReactToastify.css'; // Import the default styles
 
 const SellProduct = () => {
   const { categories } = useContext(CategoryContext); // Get categories from context
@@ -16,13 +18,11 @@ const SellProduct = () => {
   const [pincode, setPincode] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Set default category
   const [errors, setErrors] = useState({}); // Error state
-
   const { uploadImage, loading } = useCloudinaryUpload();
 
   // Validation logic
   const validateForm = () => {
     const newErrors = {};
-
     if (!productName) newErrors.productName = 'Product name is required.';
     if (!description) newErrors.description = 'Description is required.';
     if (!price) newErrors.price = 'Price is required.';
@@ -31,7 +31,6 @@ const SellProduct = () => {
     if (!address) newErrors.address = 'Address is required.';
     if (!state) newErrors.state = 'State is required.';
     if (!/^\d{6}$/.test(pincode)) newErrors.pincode = 'Pincode must be a 6-digit number.';
-
     return newErrors;
   };
 
@@ -49,6 +48,7 @@ const SellProduct = () => {
       const newProduct = {
         name: productName,
         category: selectedCategory,
+        description: description,
         image_url: imageUrl,
         price: parseFloat(price),
         address: address,
@@ -66,12 +66,15 @@ const SellProduct = () => {
       });
 
       if (response.ok) {
+        toast.success('Product added successfully!'); // Show success toast
         resetForm();
       } else {
         setErrors({ submit: 'Failed to add product.' });
+        toast.error('Failed to add product.'); // Show error toast
       }
     } else {
       setErrors({ image: 'Image upload failed.' });
+      toast.error('Image upload failed.'); // Show error toast
     }
   };
 
@@ -87,17 +90,9 @@ const SellProduct = () => {
     setErrors({});
   };
 
-  const handleBackButtonClick = () => {
-    window.location.href = '/';
-  };
-
   return (
     <div className="sell-product-container">
-      {/* Back Button */}
-      <button className="back-button" onClick={handleBackButtonClick}>
-        <img src={backicon} alt="Back" />
-      </button>
-
+      <ToastContainer /> {/* Add the ToastContainer for toast notifications */}
       <div className="sell-product">
         <h2>Post Your Ad</h2>
         <form onSubmit={handleSubmit}>
